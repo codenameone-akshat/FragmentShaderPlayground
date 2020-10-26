@@ -9,15 +9,15 @@ uniform float u_time;       // Time in seconds since load
 // #define LINE
 // #define CURVE
 // #define STEP
-// #define SMOOTHSTEP
+#define SMOOTHSTEP
 // #define PLOT_FUNC_EXAMPLE
-#define SINE
+// #define SINE
 
 #ifdef LINE
 
 float plot(vec2 st)
 {
-    return smoothstep(0.05, 0.0, abs(st.y - st.x));
+    return smoothstep(0.01, 0.0, abs(st.y - st.x));
 }
 
 void main()
